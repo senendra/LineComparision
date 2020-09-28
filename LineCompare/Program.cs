@@ -24,6 +24,18 @@ namespace LineCompare
             Console.WriteLine("Enter values of x2 and y2 for line 2 : ");
             x4 = Convert.ToInt32(Console.ReadLine());
             y4 = Convert.ToInt32(Console.ReadLine());
+            //Checking 2 lines are equal or not
+            double line1 = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+            double line2 = Math.Sqrt(Math.Pow(x4 - x3, 2) + Math.Pow(y4 - y3, 2));
+            int difflnLength = line1.CompareTo(line2);
+            if(difflnLength == 0)
+            {
+                Console.WriteLine("Lines are equal");
+            }
+            else
+            {
+                Console.WriteLine("Lines are not equal");
+            }
         }
     }
 }
