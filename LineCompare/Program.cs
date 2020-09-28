@@ -27,15 +27,21 @@ namespace LineCompare
             //Checking 2 lines are equal or not
             double line1 = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
             double line2 = Math.Sqrt(Math.Pow(x4 - x3, 2) + Math.Pow(y4 - y3, 2));
+            //Comparing both the line to get difference in length
             int difflnLength = line1.CompareTo(line2);
             if(difflnLength == 0)
             {
                 Console.WriteLine("Lines are equal");
             }
-            else
+            else if (difflnLength > 0)
             {
-                Console.WriteLine("Lines are not equal");
+                Console.WriteLine("Line 1 is greater in length than line 2");
             }
+            else 
+            {
+                Console.WriteLine("Line 2 is greater in length than line 1");
+            }
+
         }
     }
 }
